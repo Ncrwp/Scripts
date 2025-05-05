@@ -1,0 +1,1 @@
+rename "1" "somefile-%date:~10,4%%date:~7,2%%date:~4,2%"
