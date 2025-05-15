@@ -1,1 +1,1 @@
-Code needs to be ASCII-safe.
+Text being sent needs to be ASCII-safe.
