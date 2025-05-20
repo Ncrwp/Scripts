@@ -1,0 +1,9 @@
+ 
+MD5 Hashes and file info generated on Mon 05/19/2025 15:49:17.43 
+===================================================== 
+FILE=D:\Coding\Scripts\File Integrity\MyFiles\CS.txt
+MD5=60df800a407e85ad78e57a498fa7bdaa
+SIZE=947
+LINES=43
+CHARS=947
+-----------------------------------

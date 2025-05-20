@@ -1,0 +1,43 @@
+@echo off
+:: =======================
+:: EDITABLE VARIABLES
+:: =======================
+set "SOURCE=C:\Path With Spaces\Source"
+set "DEST=D:\Target Folder"
+set "APP_PATH=C:\Program Files\AppFolder\MyApp.exe"
+:: =======================
+
+:: Check if source exists
+if not exist "%SOURCE%\" (
+    echo ERROR: Source folder does not exist: %SOURCE%
+    pause
+    exit /b
+)
+
+:: Check and create destination
+if not exist "%DEST%\" (
+    echo Destination folder not found. Creating: %DEST%
+    mkdir "%DEST%"
+)
+
+:: Copy files
+echo Copying from "%SOURCE%" to "%DEST%"...
+xcopy "%SOURCE%\*" "%DEST%\" /E /H /Y
+if errorlevel 1 (
+    echo ERROR: Something went wrong during copy.
+    pause
+    exit /b
+)
+
+:: Check if app exists
+if not exist "%APP_PATH%" (
+    echo ERROR: Application not found at: %APP_PATH%
+    pause
+    exit /b
+)
+
+:: Launch the application
+echo Launching: "%APP_PATH%"
+start "" "%APP_PATH%"
+
+pause
